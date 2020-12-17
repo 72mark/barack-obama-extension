@@ -1,0 +1,23 @@
+{
+	"name": "The Barack Obama Extension",
+	"description": "A browser extension based on the 44th and best president of the United States. By Mark Hagen",
+	"manifest_version": 2,
+	"version": "0.44.0",
+	"icons": {
+		"16": "./barack16.png",
+		"32": "./barack32.png",
+		"48": "./barack48.png",
+		"128": "./barack128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["obama.js"]
+		}
+	],
+	"web_accessible_resources": ["obama.jpg"],
+	"browser_action": {
+		"default_popup": "./obama.html",
+		"default_title": "Barack Obama"
+	}
+}
